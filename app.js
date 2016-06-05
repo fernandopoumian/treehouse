@@ -8,6 +8,8 @@ var router = require("./router.js");
 
 var http = require('http');
 
+var port = process.env.PORT || 1337;
+
 http.createServer(function(request, response) {
 
     router.home(request, response);
@@ -15,6 +17,6 @@ http.createServer(function(request, response) {
     //response.end();
 
     //response.end('Hello World\n');
-}).listen(1337, '127.0.0.1');
+}).listen(port, '127.0.0.1');
 
 console.log('Server running at http://127.0.0.1:1337/');
